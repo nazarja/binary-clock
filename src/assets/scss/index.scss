@@ -1,0 +1,128 @@
+$background-color: #222;
+$foreground-color: #333;
+$accent-color: cornflowerblue;
+$text-color: cornsilk;
+$font-family: Roboto, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+body {
+    background-color: $background-color;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#binary-clock {
+    width: 90vw;
+    max-width: 1200px;
+    text-align: center;
+
+    .section {
+        display: inline-block;
+        margin: 1vw;
+
+        .column {
+            margin: 1vw;
+            display: inline-flex;
+            flex-direction: column-reverse;
+            vertical-align: bottom;
+
+            .cell {
+                height: 5vw;
+                width: 5vw;
+                margin: 1vw;
+                display: block;
+                background-color: $foreground-color;
+                border-radius: 3px;
+            }
+
+            .cell.active {
+                background-color: $accent-color;
+            }
+        }
+    }
+}
+
+#text-content {
+    color: $text-color;
+    font-family: $font-family;
+
+    #digital-time,
+    #am-pm {
+        display: inline-block
+    }
+    
+    @keyframes blink {
+        from {
+          opacity: 1;
+        }
+      
+        to {
+          opacity: 0;
+        }
+      }
+      
+      .colons {
+        animation: blink 1s infinite;
+      }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-left: 5px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked+.slider {
+            background-color: $accent-color;
+        }
+
+        &:checked+.slider::before {
+            -webkit-transform: translateX(12px);
+            -ms-transform: translateX(12px);
+            transform: translateX(12px);
+        }
+
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $foreground-color;
+        -webkit-transition: .4s;
+        transition: .4s;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+
+    .slider.round {
+        border-radius: 34px;
+
+        &::before {
+            border-radius: 50%;
+        }
+    }
+}

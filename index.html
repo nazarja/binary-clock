@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./dist/assets/css/index.css">
     <title>Binary Clock</title>
 </head>
+
 <body>
-    <div id="clock">
+    <div id="binary-clock">
         <div id="hours" class="section">
             <div class="column">
                 <div class="cell"></div>
@@ -47,7 +49,15 @@
             </div>
         </div>
     </div>
-    <div id="digital-time"></div>
-    <script src="./index.js"></script>
+    <div id="text-content">
+        <div id="digital-time"></div>
+        <div id="am-pm"></div>
+        <label class="switch" title="12 | 24 hr">
+            <input id="am-pm-toggler" type="checkbox" />
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <script src="./dist/assets/js/index.js"></script>
 </body>
+
 </html>
