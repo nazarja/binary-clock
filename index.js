@@ -11,6 +11,8 @@ const digits = [
     '1001',
 ]
 
+const timeNodes = [[],[],[]];
+
 function padNumber(number) {
     return number.toString().length === 1 ? `0${number}` : number;   
 }
@@ -20,10 +22,10 @@ function getTime() {
     const hours = now.getHours()
     const minutes = now.getMinutes()
     const seconds = now.getSeconds()
+    timeNodes[0] = [];
+    timeNodes[1] = [];
+    timeNodes[2] = [];
     return {
-        hours: hours,
-        minutes: minutes,
-        seconds: seconds,
         time: `${padNumber(hours)}:${padNumber(minutes)}:${padNumber(seconds)}`,
     }
 }
