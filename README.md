@@ -14,7 +14,7 @@ The clock is divided into 3 sections, hours, minutes and seconds
 hours   minutes   seconds
 ```
 
-Each section consists of 2 columns, which each represent a 2 didget number, for example, 03, 15 etc..
+Each section consists of 2 columns, which each represent a 2 digit number, for example, 03, 15 etc..
 
 The numbers you see on the right hand side of the snippet above represent the value of a cell at that level.
 
