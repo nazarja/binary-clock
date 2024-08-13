@@ -11,23 +11,23 @@ body {
 
 #binary-clock {
   width: 90vw;
-  max-width: 1200px;
+  max-width: 1000px;
   text-align: center;
 }
 #binary-clock .section {
   display: inline-block;
-  margin: 1vw;
+  margin: 0.7vw;
 }
 #binary-clock .section .column {
-  margin: 1vw;
+  margin: 0.7vw;
   display: inline-flex;
   flex-direction: column-reverse;
   vertical-align: bottom;
 }
 #binary-clock .section .column .cell {
-  height: 5vw;
-  width: 5vw;
-  margin: 1vw;
+  height: 3.5vw;
+  width: 3.5vw;
+  margin: 0.7vw;
   display: block;
   background-color: #333;
   border-radius: 3px;
@@ -72,7 +72,7 @@ body {
   background-color: cornflowerblue;
 }
 .switch input:checked + .slider::before {
-  transform: translateX(12px);
+  transform: translateX(9px);
 }
 .switch .slider {
   position: absolute;
@@ -89,7 +89,7 @@ body {
   content: "";
   height: 16px;
   width: 16px;
-  left: 2px;
+  left: 5px;
   bottom: 2px;
   background-color: white;
   transition: 0.4s;

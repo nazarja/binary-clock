@@ -17,23 +17,23 @@ body {
 
 #binary-clock {
     width: 90vw;
-    max-width: 1200px;
+    max-width: 1000px;
     text-align: center;
 
     .section {
         display: inline-block;
-        margin: 1vw;
+        margin: .7vw;
 
         .column {
-            margin: 1vw;
+            margin: .7vw;
             display: inline-flex;
             flex-direction: column-reverse;
             vertical-align: bottom;
 
             .cell {
-                height: 5vw;
-                width: 5vw;
-                margin: 1vw;
+                height: 3.5vw;
+                width: 3.5vw;
+                margin: .7vw;
                 display: block;
                 background-color: $foreground-color;
                 border-radius: 3px;
@@ -87,9 +87,9 @@ body {
         }
 
         &:checked+.slider::before {
-            -webkit-transform: translateX(12px);
-            -ms-transform: translateX(12px);
-            transform: translateX(12px);
+            -webkit-transform: translateX(9px);
+            -ms-transform: translateX(9px);
+            transform: translateX(9px);
         }
 
     }
@@ -110,7 +110,7 @@ body {
             content: "";
             height: 16px;
             width: 16px;
-            left: 2px;
+            left: 5px;
             bottom: 2px;
             background-color: white;
             -webkit-transition: .4s;
