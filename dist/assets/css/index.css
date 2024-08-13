@@ -10,9 +10,10 @@ body {
 }
 
 #binary-clock {
-  width: 90vw;
+  width: 55vw;
   max-width: 1000px;
   text-align: center;
+  margin-bottom: 3.5vw;
 }
 #binary-clock .section {
   display: inline-block;

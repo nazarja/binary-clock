@@ -50,8 +50,8 @@ To represent a two digit number, we have two columns, so the number 36 could be 
 
 All together a time of 19:34:58 (7:34:58pm), you would see:
 ```
-- *  - -  - *  -> 8
-- -  - *  * -  -> 4
+  *    -    *  -> 8
+  -  - *  * -  -> 4
 - -  * -  - -  -> 2
 * *  * *  * -  -> 1
 1 9  3 4  5 8
